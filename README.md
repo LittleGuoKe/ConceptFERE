@@ -14,7 +14,7 @@ Our code is based on [Bert-pair](https://github.com/thunlp/fewrel).
 
 # Checkpoint, Data files used in the code
 
-Since the files are very large, they are placed on the [Beihang cloud disk]().
+Since the files are very large, they are placed on the [Beihang cloud disk](https://bhpan.buaa.edu.cn:443/link/BF14053D268CED261B525666BF1638A2).
 
 # How the code is executed
 
