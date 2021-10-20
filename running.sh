@@ -1,0 +1,1 @@
+python train_demo.py --trainN 5 --N 5 --K 1 --Q 1 --model pair --encoder bert --pair --hidden_size 768 --val_step 1000  --save_ckpt checkpoint/5way1shot.ConceptFere.test.2021.10.19.pth.tar --batch_size 1 --grad_iter 4  --optim adam --fp16 --id_from MultiHeadAttentionAndBeyondWordEmbedding > 5way1shot.ConceptFere.test.2021.10.19.log 2>&1
