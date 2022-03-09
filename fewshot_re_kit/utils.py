@@ -19,7 +19,7 @@ def re_split_dataset(
         root='/home/yangshan/pycharm2server/KG/FewRel/data/',
         name='train_wiki', format=".json"):
     '''
-    加载 conceptgraph中实体和关系及其对应的id
+    将原始的训练数据集划分成训练集和测试集，然后原始的验证集当作测试集
     '''
 
     print('starting:', datetime.now())
