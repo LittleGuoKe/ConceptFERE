@@ -469,13 +469,14 @@ class BERTPAIRConceptSentenceEncoder(nn.Module):
 
             self.classifier = torch.nn.Linear(1792, 2)
         elif self.id_from == 'MultiHeadAttentionAndBeyondWordEmbedding':
-            # word_dim = 768 # dim取768的performance高于dim取500
-            word_dim = 500
-            self.projector1 = torch.nn.Linear(500, word_dim)
-            self.projector2 = torch.nn.Linear(768, word_dim)
+            word_dim = 768
+            self.concept_project = True
+            # word_dim = 500
+            self.projector1 = torch.nn.Linear(500, word_dim)  # 对概念向量投影
+            self.projector2 = torch.nn.Linear(768, word_dim)  # 对句子向量投影
             # self.projector3 = torch.nn.Linear(768, 120)
 
-            self.fusionLayer = torch.nn.MultiheadAttention(embed_dim=word_dim, num_heads=10, dropout=0.1)
+            self.fusionLayer = torch.nn.MultiheadAttention(embed_dim=word_dim, num_heads=12, dropout=0.1)
             self.classifier = torch.nn.Linear((self.max_length + 8) * word_dim, 2)
         else:
             assert ('please input right id source')
@@ -581,8 +582,17 @@ class BERTPAIRConceptSentenceEncoder(nn.Module):
                 '''获取句子向量'''
                 sen_vec = sen[i, :]
 
-                '''句子向量投影'''
-                sen_vec = self.projector2(sen_vec)
+                # '''句子向量投影'''
+                # sen_vec = self.projector2(sen_vec)
+                '''概念向量投影'''
+                if self.concept_project:
+                    h_cpt1_vec = self.projector1(h_cpt1_vec)  # size 由(1,500)变成(1，768)
+                    h_cpt2_vec = self.projector1(h_cpt2_vec)
+                    t_cpt1_vec = self.projector1(t_cpt1_vec)
+                    t_cpt2_vec = self.projector1(t_cpt2_vec)
+                else:
+                    '''句子向量投影'''
+                    sen_vec = self.projector2(sen_vec)
 
             '''计算句子和概念的相似度'''
             h_cpt1_sen_sim = torch.matmul(sen_vec, h_cpt1_vec.t()).float()  # size(1),计算结果为标量
