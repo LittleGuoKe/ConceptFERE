@@ -3,7 +3,7 @@
 
 This code is the source code of our paper "Entity Concept-enhanced Few-shot Relation Extraction" in the ACL2021.
 
-Our code is based on [Bert-Pair](https://github.com/thunlp/fewrel).
+Our code is based on [Bert-Pair](https://github.com/thunlp/fewrel). If Beihang Cloud Disk cannot be downloaded normally, you can try to download it in [Google drive](https://drive.google.com/file/d/161JeM_SMm3fIjLZS-1cEh-qGR-Xx1DOH/view?usp=sharing).
 
 ### Requirements
 
