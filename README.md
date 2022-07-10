@@ -3,7 +3,7 @@
 
 This code is the source code of our paper "Entity Concept-enhanced Few-shot Relation Extraction" in the ACL2021.
 
-Our code is based on [Bert-Pair](https://github.com/thunlp/fewrel). If Beihang Cloud Disk cannot be downloaded normally, you can try to download it in [Google drive](https://drive.google.com/file/d/161JeM_SMm3fIjLZS-1cEh-qGR-Xx1DOH/view?usp=sharing).
+Our code is based on [Bert-Pair](https://github.com/thunlp/fewrel).(https://drive.google.com/file/d/161JeM_SMm3fIjLZS-1cEh-qGR-Xx1DOH/view?usp=sharing).
 
 ### Requirements
 
@@ -13,7 +13,7 @@ Our code is based on [Bert-Pair](https://github.com/thunlp/fewrel). If Beihang C
 
 # Checkpoint, Data files
 
-Since the files are very large, they are placed on the [Beihang cloud disk](https://bhpan.buaa.edu.cn:443/link/BF14053D268CED261B525666BF1638A2).
+Since the files are very large, they are placed on the [Beihang cloud disk](https://bhpan.buaa.edu.cn:443/link/BF14053D268CED261B525666BF1638A2). If Beihang Cloud Disk cannot be downloaded normally, you can try to download it in [Google drive]
 
 
 # Training data
