@@ -20,8 +20,10 @@ Since the files are very large, they are placed on the [Beihang cloud disk](http
 For the Details of training data, you  can refer to [FewRel](https://thunlp.github.io/2/fewrel2_da.html).
 
 # Warning
-1.We divide the original training dataset into a new training dataset and a new validation dataset, the corresponding code is in the re_split_dataset module in fewshot_re_kit/utils.py, and the validation set in the original dataset is used as the new test dataset
-2.Due to the randomness of the experiments of the FSRE task, the results in the paper are the average of the results of multiple experiments
+## Re-split the dataset
+We divide the original training dataset into a new training dataset and a new validation dataset, the corresponding code is in the re_split_dataset module in fewshot_re_kit/utils.py, and the validation set in the original dataset is used as the new test dataset
+## Randomness
+Due to the randomness of the experiments of the FSRE task, the results in the paper are the average of the results of multiple experiments
 # How the code is executed
 
 Example:
