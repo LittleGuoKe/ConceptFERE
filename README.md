@@ -21,7 +21,6 @@
 
 This code is the source code of our paper "Entity Concept-enhanced Few-shot Relation Extraction" in the ACL2021.
 
-Our code is based on [Bert-Pair](https://github.com/thunlp/fewrel).
 
 ### Requirements
 
